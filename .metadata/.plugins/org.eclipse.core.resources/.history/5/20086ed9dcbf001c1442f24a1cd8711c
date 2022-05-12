@@ -1,0 +1,5 @@
+package com.chainsys.interfaces;
+
+public interface InterfaceCImp {
+
+}

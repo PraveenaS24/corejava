@@ -1,0 +1,32 @@
+package com.chainsys.Jdbc;
+//Step 1 : import package import java.sql.*;
+import java.io.*;
+import java.sql.*;
+
+public class Jdbc_Projects {
+public static void main(String args[])
+{
+ try {
+        // Step 2 : Load and Register
+        Class.forName("oracle.jdbc.driver.OracleDriver");// Approach 1
+        //Approach 2
+        //Driver myDriver = new oracle.jdbc.driver.OracleDriver();
+       //DriverManager.registerDriver(myDriver);
+            
+        // Step 3 : Connection
+        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","Arivu9384@36");
+        
+        // Step 4 : Statement using ( Prepared Statement )
+        
+    //Insert records
+       PreparedStatement stmt = con.prepareStatement("insert into employee values(?,?,?,?,?)");
+        stmt.setInt(1,11);
+        stmt.setString(2, "Raj");
+        stmt.setInt(3, 28000);
+        stmt.setString(4, null);
+        stmt.setString(5, "Sales");
+        int i = stmt.executeUpdate();
+        System.out.println(i + "\t" + "Records inserted");
+    }
+  }
+}

@@ -1,0 +1,19 @@
+package com.chainsys.Jdbc;
+import java.sql.*;
+public class Fetchclass {
+    public static void main(String args[]) throws Exception {
+
+        Class.forName("oracle.jdbc.driver.OracleDriver");
+        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Arivu9384@36");
+         Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+        
+        ResultSet rs = stmt.executeQuery("select * from employees");
+
+        //getting the record of 3rd row  
+         rs.absolute(5);
+       // while(rs.next()) {
+        System.out.println(rs.getString(4) + " " + rs.getString(2) + " " + rs.getString(3));
+
+        con.close();
+    }
+}

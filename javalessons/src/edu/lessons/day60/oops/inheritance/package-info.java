@@ -1,0 +1,1 @@
+package edu.lessons.day60.oops.inheritance;

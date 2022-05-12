@@ -1,0 +1,15 @@
+package com.chainsys.threads;
+
+public static void LateBinding {
+public static void queryTypeInfo() {
+	public static void testA() 
+	{
+		Sting s1="Hello";
+		printClassinfo(s1);
+		Integer x=2000;
+		printClassInfo(x);
+		Emp firstEmp=new Emp();
+		
+	}
+}
+}
