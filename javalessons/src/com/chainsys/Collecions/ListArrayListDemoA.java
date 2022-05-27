@@ -14,7 +14,7 @@ public static void lessonArrayList() {
 	System.out.println("InitiempArrayList size of empArrayList:"+empArrayList.size());//0
 	try {
 		for(int i=0;i<5;i++) {
-			Emp e1=new Emp(1);
+			Emp e1=new Emp(1, null);
 			e1.Name="Emp "+i;
 			empArrayList.add(e1);
 		}
@@ -22,7 +22,7 @@ public static void lessonArrayList() {
     Emp e3=(Emp)empArrayList.get(4);
     empArrayList.add(e3);
     System.out.println("Size of empArrayList after additions :"+empArrayList.size());
-	Emp e4=new Emp(4);
+	Emp e4=new Emp(4, null);
 	e4.Name="Elon Musk";
 	empArrayList.add((e4));
 	System.out.println("Freq of (Emp id-4) in ArrayList-"+Collections.frequency(empArrayList, e3));

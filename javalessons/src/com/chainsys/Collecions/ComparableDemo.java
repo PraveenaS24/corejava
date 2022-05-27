@@ -10,11 +10,11 @@ public class ComparableDemo {
 	}
 	public static void compareEmp()
 	{
-		Emp e1= new Emp(100);
+		Emp e1= new Emp(100, null);
 		e1.Name="Sam";
-		Emp e2=new Emp(200);
+		Emp e2=new Emp(200, null);
 		e2.Name="Musk";
-		Emp e3=new Emp(300);
+		Emp e3=new Emp(300, null);
 		e3.Name="Jobs";
 		List<Emp>empList=new ArrayList<>();
 		empList.add(e2);

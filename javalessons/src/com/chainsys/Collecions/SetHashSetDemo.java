@@ -35,12 +35,12 @@ public static void demoA()
     	 Emp e1=null;
     	 for(int i=0;i<10;i++)
     	 {
-    		 e1=new Emp(i);
+    		 e1=new Emp(i, null);
     		 e1.Name="Emp"+i;
     		 hs.add(e1);
     	 }
     System.out.println("Count"+hs.size());
-    e1=new Emp(9);
+    e1=new Emp(9, null);
     hs.add(e1);//does not add duplicate object,ignore
     System.out.println("Count"+hs.size());
     Iterator<Emp> itr=hs.iterator();
