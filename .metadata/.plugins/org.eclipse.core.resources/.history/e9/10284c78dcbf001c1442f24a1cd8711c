@@ -1,5 +1,0 @@
-package com.chainsys.interfaces;
-
-public interface InterfaceImpl {
-
-}
